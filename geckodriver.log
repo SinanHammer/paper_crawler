@@ -1,0 +1,16 @@
+1695121360233	geckodriver	INFO	Listening on 127.0.0.1:63803
+1695121363290	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63804" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DELL\\AppData\\Local\\Temp\\rust_mozprofile8ZDxbo"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695121363842	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695121363923	Marionette	INFO	Listening on port 63813
+WebDriver BiDi listening on ws://127.0.0.1:63804
+Read port: 63813
+1695121364173	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63804/devtools/browser/c128c9fd-5f04-45a5-88b5-27ca7fc5c23a
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.cnki.net."
+JavaScript warning: https://piccache.cnki.net/2022/kdn/kns8/20230830/scripts/min/merge.searchbar.min.js?v=2.6, line 12: unreachable code after return statement
+JavaScript error: https://piccache.cnki.net/2022/kdn/kns8/20230830/scripts/min/merge.searchbar.min.js?v=2.6, line 8: NS_ERROR_FAILURE: 
+1695121386042	Marionette	INFO	Stopped listening on port 63813
+Dynamically enable window occlusion 1
