@@ -5,7 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.keys import Keys
 import time
-from configure import headers
+from configure import headers, READ_TEXT, DOWLOAD
 from bs4 import BeautifulSoup
 from paper_search import PaperSearch
 import pandas as pd
@@ -23,10 +23,11 @@ class PaperInformation(PaperSearch):
         self.page_href = []  # 获取所有文献的链接
         self.new_window = None # 获取新窗口
         self.all_windows = None  # 获取所有窗口
-        self.read_txt = True
+        self.read_txt = READ_TEXT[1]
+        self.download = DOWLOAD[1]
         self.number = 0
         self.paper_table_xlsx = pd.DataFrame(columns=["序号", "题名", "作者", "来源", "发表时间", "数据库", "被引","下载"])  # 构建文献表的DataFrame
-        self.paper_infor_xlsx = pd.DataFrame(columns=["题名", "作者", "机构", "关键词", "基金资助", "专辑", "专题", "分类号", "发表期刊", "发表日期", "级别", "摘要"])  # 构建单篇文章的数据信息
+        self.paper_infor_xlsx = pd.DataFrame(columns=["题名", "作者", "机构", "关键词", "基金资助", "发表期刊", "发表日期", "级别", "摘要"])  # 构建单篇文章的数据信息
 
     def get_paper_table(self):
         # 设置等待时间上限，单位为秒
@@ -96,33 +97,73 @@ class PaperInformation(PaperSearch):
                 self.page_href = file.readlines()
                 print(self.page_href)
         for i in self.page_href:
-            # self.page_over()
-            self.driver = webdriver.Firefox()
+            time.sleep(random.uniform(0, 2))
+            if self.read_txt == False:
+                self.page_over()
+            if self.number % 2 == 0:
+                self.driver = webdriver.Firefox()
+            else:
+                self.driver = webdriver.Edge()
             self.driver.get(i)
+            # self.driver.minimize_window()
             wait = WebDriverWait(self.driver, 15)
             try:
                 # 使用等待机制，等待页面加载完成
-                wait.until(EC.presence_of_element_located((By.XPATH, "//h3[@class='author']")))
+                wait.until(EC.presence_of_element_located((By.TAG_NAME, "h1")))
                 paper_con = {}
                 paper_title = self.driver.find_element(By.CLASS_NAME, "brief")
                 paper_con['题名'] = paper_title.find_element(By.TAG_NAME, "h1").text
-                paper_con['作者机构'] = paper_title.find_element(By.XPATH, "//h3[@class='author']")
-                # paper_con['作者'] = paper_title.find_element(By.ID, "authorpart").text
-                # paper_con['机构'] = paper_title.find_element(By.XPATH, "//a[contains(@class, 'author') and contains(@target, '_blank')]").text
-                print(paper_con)
+                paper_con['作者'] = paper_title.find_element(By.CLASS_NAME, "author").text
+                paper_con['机构'] = paper_title.find_element(By.CSS_SELECTOR, "a.author").text
+                fund_elements = self.driver.find_elements(By.CSS_SELECTOR, "p.keywords")
+                if fund_elements:
+                    # 提取第一个元素的文本内容
+                    paper_con['关键词'] = fund_elements[0].text.strip()
+                else:
+                    paper_con['关键词'] = None
+                fund_elements = self.driver.find_elements(By.CSS_SELECTOR, "p.funds")
+                # 检查是否找到了基金资助元素
+                if fund_elements:
+                    # 提取第一个元素的文本内容
+                    paper_con['基金资助'] = fund_elements[0].text.strip()
+                else:
+                    # 未找到基金资助元素
+                    paper_con['基金资助'] = None
+                if len(self.driver.find_elements(By.CSS_SELECTOR, "div.top-tip span a")) == 2:
+                    paper_con['发表期刊'] = self.driver.find_elements(By.CSS_SELECTOR, "div.top-tip span a")[0].text
+                    paper_con['发表日期'] = self.driver.find_elements(By.CSS_SELECTOR, "div.top-tip span a")[1].text
+                else:
+                    paper_con['发表期刊'] = self.driver.find_element(By.CSS_SELECTOR, "div.top-tip span a").text
+                    paper_con['发表日期'] = None
+                paper_con['级别'] = [i.text for i in self.driver.find_elements(By.CSS_SELECTOR, "div.top-tip a.type")]
+                paper_con['摘要'] = self.driver.find_element(By.NAME, "ChDivSummary").text
+                down = self.driver.find_element(By.CSS_SELECTOR, "li.btn-dlpdf")
+                if self.download:
+                    self.paper_dowload(down)
+
+                # paper_con['专辑'] = self.driver.find_element(By.XPATH, "//span[text()='专辑:']/following-sibling::p").text
+                # paper_con['专题'] = self.driver.find_element(By.XPATH, "//span[text()='专题:']/following-sibling::p").text
+                # paper_con['分类号'] = self.driver.find_element(By.XPATH, "//span[text()='分类号:']/following-sibling::p").text
+                # print(paper_con)
                 self.number = self.number + 1
+                self.paper_infor_xlsx = pd.concat([self.paper_infor_xlsx, pd.DataFrame(paper_con)], ignore_index=True)
 
             except TimeoutException:
                 print("等待超时! 未找到符合条件的元素!")
                 self.number = self.number + 1
         self.driver_over()
+        self.paper_infor_xlsx.to_excel("详细信息汇总表")
 
-    def paper_dowload(self, odd_element):
-        pass
+
+    def paper_dowload(self, down):
+        down.click()
+        time.sleep(1)
+
 
     def paper_information_run(self):
         if self.read_txt:
             self.driver_over()
+            self.paper_infor_save()
             # self.paper_infor_save_requests()
         else:
             self.driver.minimize_window()
@@ -156,7 +197,7 @@ class PaperInformation(PaperSearch):
 
 
 # 创建Firefox浏览器实例
-# driver = webdriver.Firefox()
-driver = None
+driver = webdriver.Firefox()
 a = PaperInformation(driver)
 a.paper_information_run()
+

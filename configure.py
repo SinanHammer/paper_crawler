@@ -12,3 +12,5 @@ headers = [{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) G
 # 查找内容相关设置
 SEARCH_CONTENT = "袁隆平"
 SEARCH_URL = "https://www.cnki.net/"
+READ_TEXT = [False, True]
+DOWLOAD = [False, True]
