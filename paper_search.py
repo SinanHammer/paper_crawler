@@ -20,11 +20,11 @@ class PaperSearch(object):
         parent_element = self.driver.find_element(By.ID, "DBFieldBox")
         # 找到<span>元素并将其内容修改为TYPE
         span_element = parent_element.find_element(By.TAG_NAME, "span")
-        self.driver.execute_script(f"arguments[0].textContent = {TYPE};", span_element)
+        self.driver.execute_script(f"arguments[0].textContent = '{TYPE}';", span_element)
         new_value = TYPE
         self.driver.execute_script("document.getElementById('txt_sug').value = arguments[0];", new_value)
-        li_element = self.driver.find_element(By.XPATH, "//li[@value='AU']")
-        li_element_default = self.driver.find_element(By.XPATH, f"//li[@value={TYPE[Type]}]")
+        li_element = self.driver.find_element(By.XPATH, f"//li[@value='{Type[TYPE]}']")
+        li_element_default = self.driver.find_element(By.XPATH, "//li[@value='SU']")
         # 使用Selenium的方法来设置class属性为 "cur"
         self.driver.execute_script("arguments[0].setAttribute('class', '');", li_element_default)
         self.driver.execute_script("arguments[0].setAttribute('class', 'cur');", li_element)
