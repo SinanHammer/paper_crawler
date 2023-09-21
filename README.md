@@ -10,15 +10,15 @@
 
 -congfigure.py             提供搜索的类型内容的配置方法
 
--paper_search.py        实现根据设定的内容搜索查找文献相关配置页面![image-20230921105252233](C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20230921105252233.png)
+-paper_search.py        实现根据设定的内容搜索查找文献相关配置页面![image-20230921105252233](.\picture\image-20230921105252233.png)
 
--paper_information.py      实现提取页面文献主要信息，并保存在excel中；针对具体文献实现基于**爬取信息**或**链接文本**更加精细的信息采集和可选择的自动下载![image-20230921113750463](C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20230921113750463.png)
+-paper_information.py      实现提取页面文献主要信息，并保存在excel中；针对具体文献实现基于**爬取信息**或**链接文本**更加精细的信息采集和可选择的自动下载![image-20230921113750463](F:\PycharmProjects\paper_crawler\picture\image-20230921113750463.png)
 
-![image-20230921110251185](C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20230921110251185.png)
+![image-20230921110251185](.\picture\image-20230921110251185.png)
 
-![image-20230921110316928](C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20230921110316928.png)
+![image-20230921110316928](.\picture\image-20230921110316928.png)
 
-![image-20230921111543357](C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20230921111543357.png)
+![image-20230921111543357](.\picture\image-20230921111543357.png)
 
-![image-20230921125642112](C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20230921125642112.png)
+![image-20230921125642112](.\picture\image-20230921125642112.png)
 
