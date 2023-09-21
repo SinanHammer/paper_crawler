@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from configure import SEARCH_CONTENT, SEARCH_URL
+from configure import SEARCH_CONTENT, SEARCH_URL, TYPE, Type
 import time
 
 
@@ -18,13 +18,13 @@ class PaperSearch(object):
     def search_type(self):
         # ---------------------**  切换查找的依据 **-------------------------------------------
         parent_element = self.driver.find_element(By.ID, "DBFieldBox")
-        # 找到<span>元素并将其内容修改为"作者"
+        # 找到<span>元素并将其内容修改为TYPE
         span_element = parent_element.find_element(By.TAG_NAME, "span")
-        self.driver.execute_script("arguments[0].textContent = '作者';", span_element)
-        new_value = "作者"
+        self.driver.execute_script(f"arguments[0].textContent = {TYPE};", span_element)
+        new_value = TYPE
         self.driver.execute_script("document.getElementById('txt_sug').value = arguments[0];", new_value)
         li_element = self.driver.find_element(By.XPATH, "//li[@value='AU']")
-        li_element_default = self.driver.find_element(By.XPATH, "//li[@value='SU']")
+        li_element_default = self.driver.find_element(By.XPATH, f"//li[@value={TYPE[Type]}]")
         # 使用Selenium的方法来设置class属性为 "cur"
         self.driver.execute_script("arguments[0].setAttribute('class', '');", li_element_default)
         self.driver.execute_script("arguments[0].setAttribute('class', 'cur');", li_element)

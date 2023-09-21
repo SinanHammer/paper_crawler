@@ -137,6 +137,7 @@ class PaperInformation(PaperSearch):
                     paper_con['发表日期'] = None
                 paper_con['级别'] = [i.text for i in self.driver.find_elements(By.CSS_SELECTOR, "div.top-tip a.type")]
                 paper_con['摘要'] = self.driver.find_element(By.NAME, "ChDivSummary").text
+                print(paper_con)
                 down = self.driver.find_element(By.CSS_SELECTOR, "li.btn-dlpdf")
                 if self.download:
                     self.paper_dowload(down)

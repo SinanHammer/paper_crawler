@@ -2572,8 +2572,8 @@ DevTools listening on ws://127.0.0.1:55976/devtools/browser/39720580-2bb5-4b81-8
 JavaScript warning: https://g.alicdn.com/AWSC/fireyejs/1.223.1/fireyejs.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.cnki.net."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.cnki.net."
-1695237819349	geckodriver	INFO	Listening on 127.0.0.1:56378
-1695237822412	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56379" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DELL\\AppData\\Local\\Temp\\rust_mozprofileRtiwVs"
+JavaScript error: , line 0: NotFoundError: Could not move source file(C:\Users\DELL\AppData\Local\Temp\rust_mozprofileCBa87N\bookmarkbackups\bookmarks-2023-09-21.jsonlz4) because it does not exist
+-port" "56379" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DELL\\AppData\\Local\\Temp\\rust_mozprofileRtiwVs"
 console.warn: services.settings: Ignoring preference override of remote settings server
 console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
 1695237822849	Marionette	INFO	Marionette enabled
@@ -2643,4 +2643,125 @@ console.warn: LoginRecipes: "Falling back to a synchronous message for: file://.
 console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
 1695237935015	Marionette	INFO	Stopped listening on port 57887
+Dynamically enable window occlusion 1
+1695263568838	geckodriver	INFO	Listening on 127.0.0.1:58339
+1695263571903	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58340" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DELL\\AppData\\Local\\Temp\\rust_mozprofilexXR6eB"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695263572429	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695263572504	Marionette	INFO	Listening on port 58349
+WebDriver BiDi listening on ws://127.0.0.1:58340
+Read port: 58349
+1695263572734	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58340/devtools/browser/4a1359a5-233e-43e4-9200-0f9d4f7ce06b
+1695263575658	Marionette	INFO	Stopped listening on port 58349
+Dynamically enable window occlusion 1
+1695263579583	geckodriver	INFO	Listening on 127.0.0.1:58369
+1695263582637	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58370" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DELL\\AppData\\Local\\Temp\\rust_mozprofileD2hY2b"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695263583033	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695263583095	Marionette	INFO	Listening on port 58387
+WebDriver BiDi listening on ws://127.0.0.1:58370
+Read port: 58387
+1695263583279	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58370/devtools/browser/da31b262-ecb1-44fe-bd60-afbb250b55ae
+JavaScript warning: https://g.alicdn.com/AWSC/fireyejs/1.223.1/fireyejs.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.cnki.net."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.cnki.net."
+1695263610901	geckodriver	INFO	Listening on 127.0.0.1:58771
+1695263613960	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58772" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DELL\\AppData\\Local\\Temp\\rust_mozprofilebf5NGR"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695263616299	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695263616371	Marionette	INFO	Listening on port 58791
+Read port: 58791
+WebDriver BiDi listening on ws://127.0.0.1:58772
+1695263616432	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58772/devtools/browser/bfedb792-93ba-4f3d-8fbd-9e98e0a16c38
+JavaScript warning: https://piccache.cnki.net/nxgp/kcms/202309201r/js/jquery-1.10.2.min.js?t=null, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+1695263679433	geckodriver	INFO	Listening on 127.0.0.1:59067
+1695263682493	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59068" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DELL\\AppData\\Local\\Temp\\rust_mozprofilef1lh99"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695263682910	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695263682977	Marionette	INFO	Listening on port 59076
+WebDriver BiDi listening on ws://127.0.0.1:59068
+Read port: 59076
+1695263683149	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59068/devtools/browser/1f74af71-8118-42b0-a34c-7a67f9827157
+1695263684583	Marionette	INFO	Stopped listening on port 59076
+Dynamically enable window occlusion 1
+1695263688913	geckodriver	INFO	Listening on 127.0.0.1:59094
+1695263691964	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59095" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DELL\\AppData\\Local\\Temp\\rust_mozprofileVKrpgG"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695263692227	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695263692289	Marionette	INFO	Listening on port 59103
+Read port: 59103
+WebDriver BiDi listening on ws://127.0.0.1:59095
+1695263692333	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59095/devtools/browser/a10e7e8d-62cb-41ee-b634-f08895b71d08
+JavaScript warning: https://g.alicdn.com/AWSC/fireyejs/1.223.1/fireyejs.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.cnki.net."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.cnki.net."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+[GFX1-]: Killing GPU process due to IPC reply timeout
+[GF[GFX1[GX1-]: [GFXFX1--]:] :C1Com- Compositp]oorositBrimpodge[: CompoGFXosisitr1-]orBritChidorBrBgreC: Cohild rimpoeceisild dgeCritohrBvesild  ridrecegeCdivehIgs IPCeieceivld res eceiCI PC PC hcloclovesild  sse IPCrwe wece icilcoithlth rsoves  see witIreah resPC cle onosew=Ab wianorth amaiths rslreasooon=n=AbAbnS=AnnorbhutdormmoweasnnalSalSohuthutddown
+o
+ownr
+n=AmalbnShuormalShtdownut
+down
+[GFX1-]: CompositorBridgeChild receives IPC close with reason=AbnormalShutdown
+[Parent 5144, Main Thread] WARNING: base::KillProcess refusing to terminate process handle 0: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:353
+[GFX1-]: CompositorBridgeChild receives IPC close with reason=AbnormalShutdown
+[GFX1-]: CompositorBridgeChild receives IPC close with reason=AbnormalShutdown
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+1695263722322	geckodriver	INFO	Listening on 127.0.0.1:59452
+1695263725369	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59453" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DELL\\AppData\\Local\\Temp\\rust_mozprofileDatJ19"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695263725795	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695263725864	Marionette	INFO	Listening on port 59468
+WebDriver BiDi listening on ws://127.0.0.1:59453
+Read port: 59468
+1695263726074	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59453/devtools/browser/7764d043-f663-40e9-b653-c5cffce8e4b4
+JavaScript warning: https://piccache.cnki.net/nxgp/kcms/202309201r/js/jquery-1.10.2.min.js?t=null, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://g.alicdn.com/AWSC/fireyejs/1.223.1/fireyejs.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.cnki.net."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.cnki.net."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+JavaScript warning: resource://pdf.js/web/viewer.js, line 6222: Script terminated by timeout at:
+_updateInternalState@resource://pdf.js/web/viewer.js:6222:3
+_pushOrReplaceState@resource://pdf.js/web/viewer.js:6136:10
+_tryPushCurrentPosition@resource://pdf.js/web/viewer.js:6164:12
+_pageHide@resource://pdf.js/web/viewer.js:6317:12
+
+1695263781767	Marionette	INFO	Stopped listening on port 59468
+Dynamically enable window occlusion 1
+rvices.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695263760824	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695263760889	Marionette	INFO	Listening on port 59888
+WebDriver BiDi listening on ws://127.0.0.1:59855
+Read port: 59888
+1695263761059	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59855/devtools/browser/5a216710-eb85-475f-b579-7aa531fb5205
+JavaScript warning: https://piccache.cnki.net/nxgp/kcms/202309201r/js/jquery-1.10.2.min.js?t=null, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+1695263780447	Marionette	INFO	Stopped listening on port 59888
 Dynamically enable window occlusion 1
